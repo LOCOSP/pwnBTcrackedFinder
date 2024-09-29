@@ -27,11 +27,11 @@ sudo wget -O /usr/local/share/pwnagotchi/plugins/bluetooth_notifier.py https://e
 
 2. Edit your Pwnagotchi configuration file (/etc/pwnagotchi/config.toml) to enable and configure the plugin:
 
-```toml
+
 main.plugins.bluetooth_notifier.enabled = true
-main.plugins.bluetooth_notifier.target_mac_address = "XX:XX:XX:XX:XX:XX"  # Adres MAC telefonu docelowego
-main.plugins.bluetooth_notifier.bluetooth_port = 1  # Domyślny port Bluetooth RFCOMM
-```
+main.plugins.bluetooth_notifier.target_mac_address = "XX:XX:XX:XX:XX:XX"
+
+
 3. Restart the Pwnagotchi to apply the changes:
 
 ```sudo systemctl restart pwnagotchi```
