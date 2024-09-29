@@ -1,7 +1,7 @@
 # Bluetooth Notifier Plugin for Pwnagotchi
 
 ## Description
-The `BluetoothNotifier` is a custom plugin for the Pwnagotchi platform, designed to notify a specified device via Bluetooth when a matching Wi-Fi network is found. This plugin scans networks based on the entries in a `wpa-sec.cracked.potfile` and sends a message to a target device using its Bluetooth MAC address.
+The `crackedBTnotify` is a custom plugin for the Pwnagotchi platform, designed to notify a specified device via Bluetooth when a matching Wi-Fi network is found. This plugin scans networks based on the entries in a `wpa-sec.cracked.potfile` and sends a message to a target device using its Bluetooth MAC address.
 
 ## Features
 - Monitors Wi-Fi networks detected by the Pwnagotchi.
@@ -12,7 +12,7 @@ The `BluetoothNotifier` is a custom plugin for the Pwnagotchi platform, designed
 ## Prerequisites
 Before using this plugin, ensure that your Pwnagotchi has the following:
 1. **Bluetooth support** enabled.
-2. The file `/root/handshakes/wpa-sec.cracked.potfile` present and populated with entries in the following format: `hash:bssid:ssid`
+2. The file `/root/handshakes/wpa-sec.cracked.potfile` present and populated with entries in the following format: `hash:bssid:ssid:password`
 
 Where:
 - `hash` – Wi-Fi password hash.
@@ -21,9 +21,10 @@ Where:
 - `password` – Password for the network (optional).
 
 ## Installation
-1. Download the plugin file `bluetooth_notifier.py` and place it in the Pwnagotchi plugin directory (usually `/usr/local/share/pwnagotchi/plugins/`):
+1. Download the plugin file `crackedBTnotify.py` and place it in the Pwnagotchi custom-plugins directory (usually `/usr/local/share/pwnagotchi/custom-plugins/`):
 ```bash
-sudo wget -O /usr/local/share/pwnagotchi/plugins/bluetooth_notifier.py https://example.com/bluetooth_notifier.py
+sudo wget -O /usr/local/share/pwnagotchi/custom-plugins/crackedBTnotify.py https://raw.githubusercontent.com/LOCOSP/pwnBTcrackedFinder/refs/heads/main/crackedBTnotify.py
+```
 
 2. Edit your Pwnagotchi configuration file (/etc/pwnagotchi/config.toml) to enable and configure the plugin:
 
